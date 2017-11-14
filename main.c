@@ -1,4 +1,4 @@
-/*© 2017 Charlie Welsh. BSD V3 License.*/
+/*Â© 2017 Charlie Welsh. BSD V3 License.*/
 task main()
 {
 
