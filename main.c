@@ -21,6 +21,29 @@ void moveBackward(){
 	startMotor(leftMotor, -63);
 	startMotor(rightMotor, -63);
 	untilRotations(1.75, leftQuad);
+	untilRotations(1.75, rightQuad);
+	stopMotor(leftMotor);
+	stopMotor(rightMotor);
+
+}
+
+void turnLeft(){
+
+	startMotor(leftMotor, -100);
+	startMotor(rightMotor, 127);
+	untilRotations(1.15, leftQuad);
+	untilRotations(1.15, rightQuad);
+	stopMotor(leftMotor);
+	stopMotor(rightMotor);
+
+}
+
+void turnRight(){
+
+	startMotor(leftMotor, 127);
+	startMotor(rightMotor,-100);
+	untilRotations(1.15, leftQuad);
+	untilRotations(1.15, rightQuad);
 	stopMotor(leftMotor);
 	stopMotor(rightMotor);
 
