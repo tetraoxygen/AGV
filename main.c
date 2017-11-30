@@ -63,33 +63,21 @@ void turnRight(){
 
 	startMotor(leftMotor, 127);
 	startMotor(rightMotor,-100);
-	untilRotations(1.15, leftQuad);
-	untilRotations(1.15, rightQuad);
+	untilRotations(1.3, rightQuad);
 	stopMotor(leftMotor);
 	stopMotor(rightMotor);
 
 }
-
+// this (in theory) stops the motors. However, stopAllTasks might work better.
 void stahpAllMotors(){
 	stopMotor(leftMotor);
-	stopMotor(rightMotor);	
+	stopMotor(rightMotor);
 }
 
 task main()
 {
 
 	//use the above functions to navigate your maze.
-	if(SensorValue[stahp] == 1){
-		stopAllTasks();	
-	}
-	else{
-		moveForward();
-		moveForwardHalf();
-		turnLeft();
-		moveForwardHalf();
-		turnLeft();
-		wait(2);
-		turnLeft();
-	}
+	turnRight();
 
 }
