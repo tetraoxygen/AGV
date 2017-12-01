@@ -27,7 +27,7 @@ void moveForwardThreeFour(){
 //moves backward 1 foot, approx.
 void moveBackward(){
 
-    moveStraightForRotations(-1.7s, rightQuad, leftQuad);
+    moveStraightForRotations(-1.7, rightQuad, leftQuad);
 
 }
 
