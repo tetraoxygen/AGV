@@ -8,73 +8,71 @@
 //moves forward 1 foot, approx.
 void moveForward(){
 
-    moveStraightForRotations(1.7, rightQuad, leftQuad);
+	moveStraightForRotations(1.7, rightQuad, leftQuad);
 
 }
 
 void moveForwardHalf(){
 
-    moveStraightForRotations(.85, rightQuad, leftQuad);
+	moveStraightForRotations(.85, rightQuad, leftQuad);
 
 }
 
 void moveForwardThreeFour(){
 
-    moveStraightForRotations(1.275, rightQuad, leftQuad);
+	moveStraightForRotations(1.275, rightQuad, leftQuad);
 
 }
 
 //moves backward 1 foot, approx.
 void moveBackward(){
 
-    moveStraightForRotations(-1.7, rightQuad, leftQuad);
+	moveStraightForRotations(-1.7, rightQuad, leftQuad);
 
 }
 
 void turnLeft(){
 
-    startMotor(leftMotor, 100);
-    startMotor(rightMotor, -127);
-    untilRotations(2.3, rightQuad);
-    stopMotor(leftMotor);
-    stopMotor(rightMotor);
+	//Our machine requires that the direction be opposite from the one you want to go. Don't ask, it just works. 
+	//Or submit a pull request if you know how to fix it! #github
+	pointTurn(left, -63);
+	untilRotations(1.7, leftQuad);
 
 }
 
 void turnRight(){
 
-    startMotor(leftMotor, -127);
-    startMotor(rightMotor, 100);
-    untilRotations(2.3, leftQuad);
-    stopMotor(leftMotor);
-    stopMotor(rightMotor);
+	//Our machine requires that the direction be opposite from the one you want to go. Don't ask, it just works. 
+	//Or submit a pull request if you know how to fix it! #github
+	pointTurn(right, -63);
+	untilRotations(1.7, rightQuad);
 
 }
 // this (in theory) stops the motors. However, stopAllTasks might work better.
 void stahpAllMotors(){
-    stopMotor(leftMotor);
-    stopMotor(rightMotor);
+	stopMotor(leftMotor);
+	stopMotor(rightMotor);
 }
 
 task main()
 {
 
-    //use the above functions to navigate your maze.
-		moveForward();
-		moveForwardHalf();
-		turnLeft();
-		moveForwardThreeQuarters();
-		turnLeft();
-		moveForward();
-		turnLeft();
-		moveForward();
-		turnRight();
-		moveForward();
-		turnRight();
-		moveForward();
-		moveForward();
-		turnRight();
-		moveForward();
-		moveForward();
+	//use the above functions to navigate your maze.
+	moveForward();
+	moveForwardHalf();
+	turnLeft();
+	moveForwardThreeFour();
+	turnLeft();
+	moveForward();
+	turnLeft();
+	moveForward();
+	turnRight();
+	moveForward();
+	turnRight();
+	moveForward();
+	moveForward();
+	turnRight();
+	moveForward();
+	moveForward();
 
 }
