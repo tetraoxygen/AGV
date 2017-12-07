@@ -35,8 +35,8 @@ void turnLeft(){
 
 	//Our machine requires that the direction be opposite from the one you want to go. Don't ask, it just works. 
 	//Or submit a pull request if you know how to fix it! #github
-	pointTurn(left, -63);
-	untilRotations(1.7, leftQuad);
+	pointTurn(right, 63);
+	untilRotations(1.6, leftQuad);
 
 }
 
@@ -44,7 +44,7 @@ void turnRight(){
 
 	//Our machine requires that the direction be opposite from the one you want to go. Don't ask, it just works. 
 	//Or submit a pull request if you know how to fix it! #github
-	pointTurn(right, -63);
+	pointTurn(left, 63);
 	untilRotations(1.7, rightQuad);
 
 }
@@ -59,10 +59,9 @@ task main()
 
 	//use the above functions to navigate your maze.
 	moveForward();
-	moveForwardHalf();
+	moveForward();
 	turnLeft();
-	moveForwardThreeFour();
-	turnLeft();
+	moveForward();
 	moveForward();
 	turnLeft();
 	moveForward();
