@@ -54,7 +54,7 @@ void stahpAllMotors(){
 	stopMotor(rightMotor);
 }
 
-task main()
+task Drive()
 {
 
 	//use the above functions to navigate your maze.
@@ -74,4 +74,27 @@ task main()
 	moveForward();
 	moveForward();
 
+}
+
+int buttonCount(){
+	int btnCount = 0;
+	if(SensorValue[stahp] == 1){
+		btnCount = btnCount+1;
+	}
+	else{}
+	return btnCount;
+}
+
+//this starts and stops the navigation.
+task main(){
+
+
+ while(1==1){
+ 	if(buttonCount % 2 != 0){
+ 		startTask(Drive);
+ 	}
+ 	else{
+ 		stopTask(Drive);
+ 	}
+ }
 }
